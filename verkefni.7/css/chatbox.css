@@ -1,0 +1,85 @@
+#cbox{
+    display: none;
+}
+
+
+.cboxb {
+    position: fixed;
+    bottom: 0;
+    right: 3rem; 
+    width: 21rem;
+    height: 30rem;
+    max-width: 85%; 
+    height: auto;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    display: none;
+}
+
+.cbox {
+    width: 100%; 
+    height: auto; 
+    padding: 15px; 
+    background-color: var(--green-bg);
+    border-radius: 10px 10px 0 0;
+    display: block; 
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.submittakki{
+    width: 30%;
+    justify-content: space-between;
+}
+
+.cboxtakki {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    width: 50px;
+    height: 50px;
+    background-color: var(--yellow-bg);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100; 
+}
+
+
+#cbox:checked ~ .cboxb {
+    display: block; 
+    height: auto; 
+    overflow: visible;
+    bottom: 80px;
+}
+
+
+@media screen and (max-width: 48rem) {
+    .cboxb {
+        width: 40%; 
+        right: 10%; 
+    }
+}
+
+@media screen and (max-width: 24rem) {
+    .cboxb {
+        width: 75%; 
+        right: 10%; 
+        justify-content: space-between;
+    }
+}
+

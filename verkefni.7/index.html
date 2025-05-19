@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC25 Fan Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/new.css">
+  <link rel="stylesheet" href="css/chatbox.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div class="splash" id="splash">
+    <img src="images/GRitsWjb0AEWzwm-removebg-preview.png" alt="FC25 Logo">
+    <h2>Welcome to the FC25 Fan Page!</h2>
+  </div>
+
+  <nav>
+    <div>
+      <a href="#">Forsíða</a>
+      <a href="#um">Um FC25</a>
+      <a href="#forsala">Forsala</a>
+      <a href="#leikur">Happadrætti</a>
+      <a href="#dagskra">Dagskrá</a>
+      <a href="#samskipti">Samskipti</a>
+    </div>
+  </nav>
+
+  <header>
+    <img src="images/GRitsWjb0AEWzwm-removebg-preview.png" alt="FC25 Logo" style="max-height:100px">
+    <h1>FC25 - Nýr fótboltaleikur</h1>
+    <p>Útgáfudagur: 27. september 2025</p>
+    <img src="images/2x1_EaSportsFc25_image1600w.jpg" alt="Banner" style="width:100%; border-radius:10px;">
+  </header>
+
+  <section class="slideshow">
+    <img src="images/pJbEacqTYkxPRLdUArtsJM.jpg" class="slide show">
+    <img src="images/ss_e0e8a9605dc85302b34170b82abc76c98624982f.1920x1080.jpg" class="slide">
+    <img src="images/capsule_616x353.jpg" class="slide">
+  </section>
+
+  <div class="highlight">Pantaðu fyrirfram og fáðu Team of the Year leikmann!</div>
+
+  <main>
+    <section id="um">
+      <h2>Um leikinn</h2>
+      <p>FC25 er fótboltaleikur framtíðarinnar með raunverulegri spilun, nýjum hreyfikerfum og fjölmörgum leikstillingum. Hann sameinar kvenna- og karla lið og kemur út 27. september 2025.</p>
+    </section>
+
+    <section id="leikur" class="form-section">
+      <h2>Veldu uppáhaldslið og taktu þátt í happadrætti</h2>
+      <form>
+        <input type="text" placeholder="Uppáhaldslið">
+        <input type="submit" value="Skrá þig">
+      </form>
+    </section>
+
+    <section id="dagskra">
+      <h2>Útgáfudagskrá</h2>
+      <table>
+        <thead>
+          <tr><th>Dagsetning</th><th>Viðburður</th><th>Lýsing</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>01.09.25</td><td>Kynning</td><td>Trailer og gameplay</td></tr>
+          <tr><td>15.09.25</td><td>Demo</td><td>Fyrir skáða</td></tr>
+          <tr><td>27.09.25</td><td>Útgáfa</td><td>Leikurinn fer í sölu</td></tr>
+          <tr><td>01.10.25</td><td>Leikjamót</td><td>Online mót</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="forsala" class="form-section">
+      <h2>Panta leikinn</h2>
+      <form>
+        <label>Veldu útgáfu:</label>
+        <select>
+          <option>Standard</option>
+          <option>Deluxe</option>
+          <option>Ultimate</option>
+        </select><br>
+        <input type="submit" value="Panta">
+      </form>
+    </section>
+
+    <section id="samskipti" class="contact-form">
+      <h2>Samskipti</h2>
+      <form>
+        <p>Fullt nafn: <input type="text"></p>
+        <p>Netfang: <input type="email"></p>
+        <p>Skilaboð:<br><textarea rows="5"></textarea></p>
+        <p><input type="submit" value="Senda"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <dt>Nafn</dt>
+        <dd>Mihail Fedoorets</dd>
+      <dt>Tölvupóstur</dt>
+        <dd>misha111208@gmail.com</dd>
+      <dt>Vefhönnun</dt>
+        <dd>VEFÞ2VHB5AU, tölvubraut Tækniskólans</dd>
+  </footer>
+
+  <script>
+    let myndir = document.querySelectorAll(".slide");
+    let nuverandi = 0;
+    function skiptaUmMynd() {
+      myndir.forEach(m => m.classList.remove("show"));
+      nuverandi = (nuverandi + 1) % myndir.length;
+      myndir[nuverandi].classList.add("show");
+    }
+    setInterval(skiptaUmMynd, 3000);
+
+    window.addEventListener("load", () => {
+      const splash = document.getElementById("splash");
+      setTimeout(() => {
+        splash.style.opacity = '0';
+        setTimeout(() => {
+          splash.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }, 500);
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
